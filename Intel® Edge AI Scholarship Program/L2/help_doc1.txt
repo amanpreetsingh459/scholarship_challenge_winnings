@@ -1,0 +1,28 @@
+####Exercise 1
+If u re just getting to lesson two exercise 7 and things seem a little confusing , here is a break down of what you need to
+Click the "SOURCE ENV" button
+Run the line below
+cd /opt/intel/openvino/deployment_tools/tools/model_downloader
+Run the line below to Downloading Human Pose Model
+sudo ./downloader.py --name human-pose-estimation-0001 -o /home/workspace
+Run the line below to Downloading Text Detection Model
+sudo ./downloader.py --name text-detection-0004 --precisions FP16 -o /home/workspace
+Run the line below to Downloading Car Metadata Model
+sudo ./downloader.py --name vehicle-attributes-recognition-barrier-0039 --precisions INT8 -o /home/workspace
+Run the line below to navigate to the folder to confirm your downloads are successful. there should be an intel folder
+/home/workspace+
+
+
+
+cv2.imread
+cv2.resize
+.transpose
+.reshape
+
+
+####Exercise 2
+python app.py -i "images/blue-car.jpg" -t "CAR_META" -m "/home/workspace/models/vehicle-attributes-recognition-barrier-0039.xml" -c "/opt/intel/openvino/deployment_tools/inference_engine/lib/intel64/libcpu_extension_sse4.so"
+
+python app.py -i "images/sitting-on-car.jpg" -t "POSE" -m "/home/workspace/models/human-pose-estimation-0001.xml" -c "/opt/intel/openvino/deployment_tools/inference_engine/lib/intel64/libcpu_extension_sse4.so"
+
+python app.py -i "images/sign.jpg" -t "TEXT" -m "/home/workspace/models/text-detection-0004.xml" -c "/opt/intel/openvino/deployment_tools/inference_engine/lib/intel64/libcpu_extension_sse4.so"
