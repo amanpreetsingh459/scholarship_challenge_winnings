@@ -1,1 +1,1 @@
-## AWS Machine Learning Scholarship Challenge June 2020
+## AWS Machine Learning Scholarship Challenge (May-July 2020)
