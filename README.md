@@ -1,4 +1,4 @@
-# scholarship_challenges
+# scholarship_challenge_winnings
 
 This repository contains the coding assignments from the scholarship challenges which conducted on [Udacity.com](https://udacity.com)
 
